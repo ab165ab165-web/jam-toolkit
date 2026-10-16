@@ -1,0 +1,83 @@
+# Unity / 团结引擎 .gitattributes
+# 美术与音频走 Git LFS，避免大文件污染 git 历史。
+
+# Detect text files (cross-platform safety)
+* text=auto eol=lf
+
+# Unity / 团结 .meta: keep LF, treat as text
+*.meta          text eol=lf
+
+# C# source
+*.cs            text eol=lf
+*.shader        text eol=lf
+*.compute       text eol=lf
+
+# Scenes & prefabs: keep as text (Unity merges cleanly when needed)
+*.unity         text eol=lf
+*.prefab        text eol=lf
+# NOTE: *.asset is intentionally NOT marked as text. Unity serialized assets
+# (AnimationClip, AudioMixer, RenderPipelineAsset, …) are YAML-or-binary and
+# are handled as binary below (filter=lfs or plain binary). Setting both
+# `text eol=lf` and `binary` for the same pattern confused earlier revs.
+
+# --- LFS-tracked (binary assets) ---
+# 图片/纹理
+*.png           filter=lfs diff=lfs merge=lfs -text
+*.jpg           filter=lfs diff=lfs merge=lfs -text
+*.jpeg          filter=lfs diff=lfs merge=lfs -text
+*.webp          filter=lfs diff=lfs merge=lfs -text
+*.tga           filter=lfs diff=lfs merge=lfs -text
+*.psd           filter=lfs diff=lfs merge=lfs -text
+*.ai            filter=lfs diff=lfs merge=lfs -text
+*.svg           filter=lfs diff=lfs merge=lfs -text
+
+# 模型 / 网格 / 动画
+*.fbx           filter=lfs diff=lfs merge=lfs -text
+*.obj           filter=lfs diff=lfs merge=lfs -text
+*.blend         filter=lfs diff=lfs merge=lfs -text
+*.dae           filter=lfs diff=lfs merge=lfs -text
+*.max           filter=lfs diff=lfs merge=lfs -text
+*.ma            filter=lfs diff=lfs merge=lfs -text
+*.mb            filter=lfs diff=lfs merge=lfs -text
+*.anim          filter=lfs diff=lfs merge=lfs -text
+*.controller    filter=lfs diff=lfs merge=lfs -text
+
+# 纹理/材质 Unity 自家格式
+*.asset          binary
+*.mat            filter=lfs diff=lfs merge=lfs -text
+*.cubemap        filter=lfs diff=lfs merge=lfs -text
+*.physicsmaterial filter=lfs diff=lfs merge=lfs -text
+*.physicmaterial filter=lfs diff=lfs merge=lfs -text
+
+# 音频
+*.wav           filter=lfs diff=lfs merge=lfs -text
+*.mp3           filter=lfs diff=lfs merge=lfs -text
+*.ogg           filter=lfs diff=lfs merge=lfs -text
+*.flac          filter=lfs diff=lfs merge=lfs -text
+*.aif           filter=lfs diff=lfs merge=lfs -text
+*.aiff          filter=lfs diff=lfs merge=lfs -text
+*.m4a           filter=lfs diff=lfs merge=lfs -text
+
+# 视频
+*.mp4           filter=lfs diff=lfs merge=lfs -text
+*.mov           filter=lfs diff=lfs merge=lfs -text
+*.webm          filter=lfs diff=lfs merge=lfs -text
+*.avi           filter=lfs diff=lfs merge=lfs -text
+
+# 字体
+*.ttf           filter=lfs diff=lfs merge=lfs -text
+*.otf           filter=lfs diff=lfs merge=lfs -text
+*.woff          filter=lfs diff=lfs merge=lfs -text
+*.woff2         filter=lfs diff=lfs merge=lfs -text
+
+# 打包文件
+*.zip           filter=lfs diff=lfs merge=lfs -text
+*.7z            filter=lfs diff=lfs merge=lfs -text
+*.tar.gz        filter=lfs diff=lfs merge=lfs -text
+*.unitypackage  filter=lfs diff=lfs merge=lfs -text
+*.apk           filter=lfs diff=lfs merge=lfs -text
+*.aab           filter=lfs diff=lfs merge=lfs -text
+*.exe           filter=lfs diff=lfs merge=lfs -text
+*.dll           filter=lfs diff=lfs merge=lfs -text
+*.so            filter=lfs diff=lfs merge=lfs -text
+*.dylib         filter=lfs diff=lfs merge=lfs -text

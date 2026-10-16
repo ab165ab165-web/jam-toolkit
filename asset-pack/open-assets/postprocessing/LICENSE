@@ -1,0 +1,51 @@
+MIT License
+
+> **Note**: This directory contains a `JamKit_BuiltIn_PostProcessing_Profile.asset`
+> that is **hand-authored by hackathon-prep maintainers** (MIT), and references
+> upstream Unity-Technologies/PostProcessing MonoScript classes (Unity Companion
+> License v1.4 + BSD-3-Clause per-file, depending on file). The asset ITSELF is
+> MIT; the upstream package must be installed via UPM to make the .asset file
+> resolvable.
+
+Copyright (c) 2026 hackathon-prep contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, organize, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+------------------------------------------------------------------------------
+
+Per-file license breakdown for `open-assets/postprocessing/`:
+
+| File | License | Origin |
+| ---- | ------- | ------ |
+| `README.md` | MIT (this repo) | Hand-authored by hackathon-prep maintainers |
+| `JamKit_BuiltIn_PostProcessing_Profile.asset` (+ `.meta`) | **MIT** (this repo) | Hand-authored; derived from upstream class names (PostProcessProfile / Bloom / ColorGrading / Vignette) but content is original MIT-licensed work. References upstream MonoScript GUIDs from `Unity-Technologies/PostProcessing` (UCL + BSD-3, depending on file). |
+
+The asset references these upstream MonoScript GUIDs (must be resolvable for
+the .asset to load — install `com.unity.postprocessing` 3.4.x via UPM):
+
+- `PostProcessProfile` — GUID `8e6292b2c06870d4495f009f912b9600`
+- `Bloom` — GUID `48a79b01ea5641d4aa6daa2e23605641`
+- `ColorGrading` — GUID `adb84e30e02715445aeb9959894e3b4d`
+- `Vignette` — GUID `40b924e2dad56384a8df2a1e111bb675`
+
+Upstream (NOT bundled; install via UPM):
+
+- PostProcessing v2 (PPv2): https://github.com/Unity-Technologies/PostProcessing
+  (Unity Companion License v1.4 for the package, BSD-3-Clause for some files;
+  MonoScript GUIDs above are stable across 2.x → 3.4.x)

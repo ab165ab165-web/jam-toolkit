@@ -1,0 +1,79 @@
+# Unity / 团结引擎 .gitignore
+# 适配 Unity 2022.3 LTS + 团结引擎 2022.3.62t16
+
+# Unity auto-generated folders — never commit these
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+
+# Unity3D-generated build files
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlytics
+crashlytics-build.properties
+
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporary auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# --- 团结引擎 specifics ---
+# 团结引擎生成的 cache 与本地设置
+/Tuanjie/[Ll]ibrary/
+/Tuanjie/[Tt]emp/
+/Tuanjie/[Oo]bj/
+/Tuanjie/[Bb]uild/
+/Tuanjie/[Bb]uilds/
+/Tuanjie/[Ll]ogs/
+/Tuanjie/[Uu]ser[Ss]ettings/
+/Tuanjie/[Mm]emoryCaptures/
+
+# WebGL build outputs (already covered by /[Bb]uild/ above; left as documentation)
+/[Bb]uild/WebGL/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 团结引擎 Hub 临时
+*.tmp
+*.bak
+*.swp
+*~
+
+# Builds from `build.sh`
+/dist/
+*.zip
+
+# Local secrets / env
+.env
+.env.local
+*.local

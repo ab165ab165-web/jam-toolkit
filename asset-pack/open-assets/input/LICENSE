@@ -1,0 +1,40 @@
+MIT License
+
+> **Note**: This directory contains files under the **Unity Companion
+> License (UCL)** in addition to the MIT-licensed hand-authored files
+> below. Refer to the per-file license breakdown table at the bottom
+> of this file for the authoritative attribution of each file.
+
+Copyright (c) 2026 hackathon-prep contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+------------------------------------------------------------------------------
+
+Per-file license breakdown for `open-assets/input/`:
+
+| File | License | Origin |
+| ---- | ------- | ------ |
+| `INTEGRATION.md` | MIT (this repo) | Hand-authored by hackathon-prep maintainers |
+| `InputActions/JamKit_MinimalInputActions.inputactions` | MIT (this repo) | Hand-authored by hackathon-prep maintainers |
+| `InputActions/JamKit_DefaultInputActions.inputactions` | **Unity Companion License (UCL)** | Derived from `Unity-Technologies/InputSystem` `DefaultInputActions.inputactions` (Unity Companion License v1.4). Full UCL §5 Notices text reproduced in `assets/LICENSES.md`. |
+
+Official source (NOT bundled in this pack; install via UPM):
+- InputSystem package: https://github.com/Unity-Technologies/InputSystem
+- UPM install: `"com.unity.inputsystem": "1.13.0"` (or later)
